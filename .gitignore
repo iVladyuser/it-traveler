@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# map api token
+
+/src/map/token.js
