@@ -17,15 +17,15 @@ const userData = reactive({
     @submit.prevent="emit('submit', toRaw(userData))"
     class="max-w-[500px] w-full bg-white p-10 rounded-2xl"
   >
-    <IInput class="mb-4" label="Повне ім’я" v-model="userData.name" />
+    <IInput class="mb-4" label="Full name" v-model="userData.name" />
     <IInput
       type="textarea"
       class="mb-4"
-      label="Електронна пошта"
+      label="Email"
       placeholder="email@gmail.com"
       v-model="userData.email"
     />
-    <IInput label="Пароль" type="password" v-model="userData.password" />
-    <IButton class="mt-10 w-full" variant="gradient" type="submit">Створити аккаунт</IButton>
+    <IInput label="Parol" type="password" v-model="userData.password" />
+    <IButton class="mt-10 w-full" variant="gradient" type="submit">Create an account</IButton>
   </FormContainer>
 </template>
