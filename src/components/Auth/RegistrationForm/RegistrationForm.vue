@@ -1,6 +1,6 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
-import IButton from '../../IButton/iButton.vue'
+import IButton from '../IButton/IButton.vue'
 import IInput from '../../IInput/IInput.vue'
 
 const props = defineProps({

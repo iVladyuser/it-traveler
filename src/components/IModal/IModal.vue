@@ -1,4 +1,5 @@
 <script setup>
+// eslint-disable-next-line no-unused-vars
 import { onMounted, onUnmounted, Teleport } from 'vue'
 import CrossIcon from '../icons/CrossIcon.vue'
 

@@ -1,6 +1,6 @@
 <script setup>
 import { computed, reactive } from 'vue'
-import IButton from '../IButton/iButton.vue'
+import IButton from '../IButton/IButton.vue'
 import IInput from '../IInput/IInput.vue'
 import IModal from '../IModal/IModal.vue'
 import InputImage from '../InputImage/InputImage.vue'

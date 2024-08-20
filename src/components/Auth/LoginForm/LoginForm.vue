@@ -1,7 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
 import IInput from '../../IInput/IInput.vue'
-import IButton from '../../IButton/iButton.vue'
+import IButton from '../../IButton/IButton.vue'
 
 const props = defineProps({
   isLoading: {
