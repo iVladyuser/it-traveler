@@ -1,8 +1,14 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
-import IButton from '../../IButton/IButton.vue'
+import IButton from '../../IButton/iButton.vue'
 import IInput from '../../IInput/IInput.vue'
 
+const props = defineProps({
+  isLoading: {
+    default: false,
+    type: Boolean
+  }
+})
 const emit = defineEmits(['submit'])
 const userData = reactive({
   name: '',
@@ -14,14 +20,10 @@ const userData = reactive({
 <template>
   <form @submit.prevent="emit('submit', toRaw(userData))">
     <IInput class="mb-4" label="Full name" v-model="userData.name" />
-    <IInput
-      type="textarea"
-      class="mb-4"
-      label="Email"
-      placeholder="email@gmail.com"
-      v-model="userData.email"
-    />
+    <IInput class="mb-4" label="Email" placeholder="email@gmail.com" v-model="userData.email" />
     <IInput label="Parol" type="password" v-model="userData.password" />
-    <IButton class="mt-10 w-full" variant="gradient" type="submit">Create an account</IButton>
+    <IButton class="mt-10 w-full" variant="gradient" type="submit" :is-loading="props.isLoading"
+      >Create an account</IButton
+    >
   </form>
 </template>

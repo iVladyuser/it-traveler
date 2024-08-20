@@ -1,6 +1,6 @@
 <script setup>
 import FavoritePlace from '../FavoritePlace/FavoritePlace.vue'
-import IButton from '../IButton/IButton.vue'
+import IButton from '../IButton/iButton.vue'
 
 const props = defineProps({
   items: {
@@ -19,10 +19,11 @@ const gradient = 'gradient-class'
 </script>
 
 <template>
-  <div class="px-6">
+  <div class="px-6 text-black">
     <div class="text-gray mb-4">Added markers</div>
     <slot name="label"></slot>
     <slot name="list">
+      <div v-if="items.length === 0">List is empty</div>
       <FavoritePlace
         v-for="place in props.items"
         :key="place.id"
