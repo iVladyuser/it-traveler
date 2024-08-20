@@ -13,7 +13,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['place-clicked'])
+const emit = defineEmits(['place-clicked', 'create'])
 
 const gradient = 'gradient-class'
 </script>
@@ -36,6 +36,6 @@ const gradient = 'gradient-class'
     </slot>
 
     <slot></slot>
-    <IButton class="w-full mt-10" :variant="gradient">Add marker</IButton>
+    <IButton class="w-full mt-10" :variant="gradient" @click="emit('create')">Add marker</IButton>
   </div>
 </template>
