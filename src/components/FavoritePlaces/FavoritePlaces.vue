@@ -75,11 +75,11 @@ const handleDeletePlace = () => {
 
 <template>
   <div class="px-6 text-black">
-    <div class="text-gray mb-4">Додані маркери</div>
+    <div class="text-gray mb-4">Added Markers</div>
 
     <slot name="label"></slot>
     <slot name="list">
-      <div v-if="items.length === 0 && !isPlacesLoading">Список порожній</div>
+      <div v-if="items.length === 0 && !isPlacesLoading">The list is empty</div>
       <FavoritePlace
         v-for="place in props.items"
         :key="place.id"
@@ -106,13 +106,11 @@ const handleDeletePlace = () => {
         :has-error="deleteError"
         @cancel="closeConfirmationModal"
         @confirm="handleDeletePlace"
-        title="Ви дійсно хочете видалити улюблене місце?"
+        title="Are you sure you want to delete this favorite place?"
       />
     </slot>
 
     <slot></slot>
-    <IButton class="w-full mt-10" variant="gradient" @click="emit('create')">
-      Додати маркер
-    </IButton>
+    <IButton class="w-full mt-10" variant="gradient" @click="emit('create')"> Add Marker </IButton>
   </div>
 </template>

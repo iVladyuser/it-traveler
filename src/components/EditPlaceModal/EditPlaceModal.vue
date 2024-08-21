@@ -48,7 +48,7 @@ const handleChangeImg = (url) => {
     <div class="w-[750px]">
       <div class="flex gap-2 items-center mb-10">
         <MarkerIcon height="18" width="18" />
-        <span class="font-bold text-base">Редагувати маркер</span>
+        <span class="font-bold text-base">Edit Marker</span>
       </div>
       <form @submit.prevent="emit('submit', formData)">
         <div class="flex gap-5">
@@ -61,18 +61,18 @@ const handleChangeImg = (url) => {
           </div>
 
           <div class="w-7/12">
-            <IInput label="Локація" v-model="formData.title" />
+            <IInput label="Location" v-model="formData.title" />
             <div class="mt-4">
-              <IInput label="Опис" type="textarea" v-model="formData.description" />
+              <IInput label="Description" type="textarea" v-model="formData.description" />
             </div>
             <IButton class="mt-10 w-full" variant="gradient" :is-loading="isLoading">
-              Зберегти
+              Save
             </IButton>
           </div>
         </div>
 
         <InputImage class="mt-3" @uploaded="handleChangeImg">
-          <span class="text-xs">Натисніть тут, щоб додати інше фото</span>
+          <span class="text-xs">Click here to add a different photo</span>
         </InputImage>
       </form>
     </div>
